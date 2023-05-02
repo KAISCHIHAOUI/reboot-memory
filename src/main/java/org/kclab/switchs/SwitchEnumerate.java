@@ -1,4 +1,4 @@
-package org.example;
+package org.kclab.switchs;
 
 import static java.lang.System.*;
 
@@ -16,7 +16,7 @@ public class SwitchEnumerate {
         testDayOfTheWeek(null);
     }
      static void testDayOfTheWeek(DaysOfTheWeek days) {
-        if(days!=null) {
+
             switch (days) {
                 case MONDAY -> out.println(days + " is first day of the week");
                 case TUESDAY -> out.println(days + " is second day of the week");
@@ -25,10 +25,8 @@ public class SwitchEnumerate {
                 case FRIDAY -> out.println(days + " is fifth day of the week ");
                 case SATURDAY -> out.println(days + " is sixth day of the week ");
                 case SUNDAY -> out.println(days + " is seventh and the last day of the week ");
+                case null -> out.println("UNKNOWN !!!"); //NULL IN SWITCH DIRECTLY
                 default -> out.println("OUT OF THE BOX !");
             }
         }
-        else
-            out.print("NULL");
-    }
 }
