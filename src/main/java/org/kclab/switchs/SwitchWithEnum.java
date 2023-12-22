@@ -2,8 +2,9 @@ package org.kclab.switchs;
 
 import static java.lang.System.*;
 
-public class SwitchEnumerate {
-    private enum DaysOfTheWeek {MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY}
+public class SwitchWithEnum {
+	
+    enum DaysOfTheWeek {MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY}
 
     public static void main(String[] args) {
         testDayOfTheWeek(DaysOfTheWeek.MONDAY);
@@ -13,7 +14,7 @@ public class SwitchEnumerate {
         testDayOfTheWeek(DaysOfTheWeek.FRIDAY);
         testDayOfTheWeek(DaysOfTheWeek.SATURDAY);
         testDayOfTheWeek(DaysOfTheWeek.SUNDAY);
-        testDayOfTheWeek(null);
+       
     }
      static void testDayOfTheWeek(DaysOfTheWeek days) {
 
@@ -25,7 +26,6 @@ public class SwitchEnumerate {
                 case FRIDAY -> out.println(days + " is fifth day of the week ");
                 case SATURDAY -> out.println(days + " is sixth day of the week ");
                 case SUNDAY -> out.println(days + " is seventh and the last day of the week ");
-                case null -> out.println("UNKNOWN !!!"); //NULL IN SWITCH DIRECTLY
                 default -> out.println("OUT OF THE BOX !");
             }
         }

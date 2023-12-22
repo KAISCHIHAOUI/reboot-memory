@@ -1,35 +1,45 @@
 package org.kclab.switchs;
 
+import static java.lang.System.*;
+
 public class GuardedPattern {
-    public static void main(String[] args) {
 
-                  testPattern(null);
-                  testPattern(new Animal());
-                  testPattern(new Dog());
-                  testPattern(new Cat());
+	public static void main(String[] args) {
 
-    }
+		
+		testGuardRedif(new Animal());
+		testGuardRedif(new Dog());
+		testGuardRedif(new Cat());
+	}
 
+	static void testGuardRedif(Animal animal) {
+      
+		switch (animal) {
+		case Dog d when (d.calculateAge() > 0) -> out.println("AGE must be in [min:1,max:20]"+d.calculateAge());
+		case Cat c -> out.println("This is a Cat "+c);
+		default -> animal.toString();
 
-    static void testPattern(Animal animal)
-    {
-        switch (animal)
-        {
-            case null -> System.out.println("null test");
-            case Dog d && d.calculateAge()>0 -> System.out.println("AGE must be in [min:1,max:20]");
-            case Cat c -> System.out.println("Cat");
-            default -> System.out.println("UNKNOWN !");
-
-        }
-    }
+		}
+	}
 }
 
+class Animal {
+	public Animal() {
+		super();
+	}
+	
+	int calculateAge() {
+	   return Integer.valueOf(0);	
+	}
+}
 
-class Animal{}
-class Cat extends Animal{}
-class Dog extends Animal{
-    int calculateAge()
-    {
-           return Integer.valueOf(2);
-    }
+class Cat extends Animal {
+	
+}
+
+class Dog extends Animal {
+     @Override
+	int calculateAge() {
+		return Integer.valueOf(5);
+	}
 }

@@ -1,13 +1,13 @@
 package org.kclab.switchs;
 
-public class SwitchFormatterPattern {
+public class FormatterPattern {
     //JEP 406
     public static void main(String[] args) {
-        System.out.println(testFormatterPattern("TEST FORMAT PATTERN JAVA 17 - JEP 406"));
-        System.out.println(testFormatterPattern(30.00));
-        System.out.println(testFormatterPattern(true));
-        System.out.println(testFormatterPattern(3.1414f));
-        System.out.println(testFormatterPattern(Math.cos(0)));
+        testFormatterPattern("TEST FORMAT PATTERN JAVA 17 - JEP 406");
+        testFormatterPattern(30.00);
+        testFormatterPattern(true);
+        testFormatterPattern(3.1414f);
+        testFormatterPattern(Math.cos(0));
 
 
     }
