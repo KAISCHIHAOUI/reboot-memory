@@ -1,3 +1,3 @@
 # reboot-memory
-### REFRESH-BOOT-MEMORY JAVA 17+
-#### More for JAVA LTS
+### REFRESH-BOOT-MEMORY JAVA 17+ -> JAVA 21
+#### Java language changes...
